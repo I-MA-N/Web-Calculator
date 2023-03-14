@@ -1,0 +1,108 @@
+/* ---> Main styles */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Rubik Iso', cursive;
+}
+
+.calculator {
+    width: 270px;
+    height: 410px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.calculator button {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000000;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    box-shadow: inset 0 0 8px #000000;
+}
+
+.calculator button:active {
+    font-size: 10px;
+}
+
+.calculator .operator {
+    color: #6D9886;
+}
+
+/* ---> Input/Output button Style */
+#textBox {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000000;
+    text-align: center;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+#textBox:focus {
+    box-shadow: inset 0 0 8px #000000;
+}
+
+/* ---> Clear and Delete buttons styles */
+.topSection {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topSection .topButtons {
+    width: 95px;
+}
+
+/* ---> Numbers layout */
+.numberSection {
+    grid-column: 1/4;
+    grid-row: 3/6;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* ---> Operators and Equal sign styles */
+.rightSection {
+    grid-column: 4/5;
+    grid-row: 2/6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ---> Other buttons styles */
+.bottomSection {
+    grid-column: 1/5;
+    grid-row: 6/7;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottomSection .equalSign {
+    width: 130px;
+}
