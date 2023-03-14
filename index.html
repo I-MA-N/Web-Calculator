@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons8-calculator-64.png" type="image/x-icon"/>
+    <script src="script.js"></script>
+    
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div class="calculator">
+        <input type="text" id="textBox">
+        <div class="topSection">
+            <button type="button" class="topButtons operator" onclick="clearing()">AC</button>
+            <button type="button" class="topButtons operator" onclick="deleting()">DE</button>
+        </div>
+        <div class="numberSection">
+            <button type="button" onclick="textBox.value += '1'">1</button>
+            <button type="button" onclick="textBox.value += '2'"">2</button>
+            <button type="button" onclick="textBox.value += '3'"">3</button>
+            <button type="button" onclick="textBox.value += '4'"">4</button>
+            <button type="button" onclick="textBox.value += '5'"">5</button>
+            <button type="button" onclick="textBox.value += '6'"">6</button>
+            <button type="button" onclick="textBox.value += '7'"">7</button>
+            <button type="button" onclick="textBox.value += '8'"">8</button>
+            <button type="button" onclick="textBox.value += '9'"">9</button>
+        </div>
+        <div class="rightSection">
+            <button type="button" class="rightButtons operator" onclick="opetators(); plusOperator()">+</button>
+            <button type="button" class="rightButtons operator" onclick="opetators(); minusOperator()">-</button>
+            <button type="button" class="rightButtons operator" onclick="opetators(); divisionOperator()">&divide;</button>
+            <button type="button" class="rightButtons operator" onclick="opetators(); multiplicationOperator()">&times;</button>
+        </div>
+        <div class="bottomSection">
+            <button type="button" onclick="period( )">.</button>
+            <button type="button" onclick="textBox.value += '0'"">0</button>
+            <button type="button" class="equalSign operator" onclick="equalSign()">=</button>
+        </div>
+    </div>
+
+</body>
+</html>
